@@ -1,60 +1,64 @@
 //ST10494672 Jordan Knipe IMAD
 package com.example.playlistapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RatingBar
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import vcmsa.ci.musicplaylist.R
 
 class MainActivity : AppCompatActivity() {
 
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_details)
+        setContentView(R.layout.activity_main)
 
-        // References to UI elements
+        if (savedInstanceState == null) {
+            Toast.makeText(this, "MainActivity Loaded", Toast.LENGTH_SHORT).show()
+        }
+
+
+        // Initialize Views
         val etTitle = findViewById<EditText>(R.id.etTitle)
         val etArtist = findViewById<EditText>(R.id.etArtist)
         val ratingBar = findViewById<RatingBar>(R.id.ratingBar)
         val etComment = findViewById<EditText>(R.id.etComment)
         val btnSave = findViewById<Button>(R.id.btnSave)
+        val btnGoToSecond = findViewById<Button>(R.id.btnGoToSecond)
         val tvMessage = findViewById<TextView>(R.id.tvMessage)
 
+        // Save Playlist Data
         btnSave.setOnClickListener {
-            // Get input values
             val title = etTitle.text.toString().trim()
             val artist = etArtist.text.toString().trim()
-            val rating = ratingBar.rating
+            val rating = ratingBar.rating.toDouble()
             val comment = etComment.text.toString().trim()
 
-            // Validate required field
             if (title.isEmpty()) {
                 etTitle.error = "Title is required"
                 return@setOnClickListener
             }
-            // Set up start button click listener
-            val startButton = findViewById<Button>(R.id.btnSave)
-            startButton.setOnClickListener {
 
-                // Launch the quiz activity when start is clicked
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+            // Show success message
+            tvMessage.text = "Saved:\nTitle: $title\nArtist: $artist\nRating: $rating\nComment: $comment"
 
-                // Display success message
-                tvMessage.text = """
-                Saved Playlist:
-                Title: $title
-                Artist: $artist
-                Rating: $rating
-                Comment: $comment
-            """.trimIndent()
-            }
+            // Store in a list or pass to SecondActivity
+            val playlistItem = mapOf(
+                "title" to title,
+                "artist" to artist,
+                "rating" to rating,
+                "comment" to comment
+            )
+        }
+
+        // Navigate to Second Screen
+        btnGoToSecond.setOnClickListener {
+            val intent = Intent(this, SecondActivity::class.java)
+            startActivity(intent)
         }
     }
 }

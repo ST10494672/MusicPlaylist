@@ -1,40 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
+    android:id="@+id/main"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:padding="24dp"
+    tools:context=".Details">
 
-    <!-- Display Average Rating -->
     <TextView
         android:id="@+id/tvAverageRating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Average Rating: --"
+        android:text="@string/average_rating"
         android:textSize="20sp"
         android:layout_marginBottom="24dp"/>
 
-    <!-- Calculate Average Rating Button -->
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calculate Average Rating"
+        android:text="@string/calculate_average_rating"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Back to Main Button -->
     <Button
         android:id="@+id/btnBackToMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back to Main Screen"
+        android:text="@string/back_to_main_screen"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Exit App Button -->
     <Button
         android:id="@+id/btnExitApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exit App"/>
+        android:text="@string/exit_app"/>
 </LinearLayout>

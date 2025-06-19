@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">MusicPlaylist</string>
+    <string name="save_playlist">Save Playlist</string>
+    <string name="goes_to_second">Goes to second</string>
+    <string name="enter_comment">Enter Comment</string>
+    <string name="average_rating">Average Rating: --</string>
+    <string name="calculate_average_rating">Calculate Average Rating</string>
+    <string name="back_to_main_screen">Back to Main Screen</string>
+    <string name="exit_app">Exit App</string>
+    <string name="enter_artist">Enter Artist</string>
 </resources>
