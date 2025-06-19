@@ -10,76 +10,77 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Song Title:"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editsongtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:hint="Enter song title"
-        android:textSize="18sp"/>
+        android:inputType="numberDecimal"
+        android:textSize="18sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Artist Name:"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editTextNumber1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:hint="Artist name"
-        android:textSize="18sp"/>
+        android:inputType="numberDecimal"
+        android:textSize="18sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="The rating:"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editRating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:hint="Rating (1-5)"
-        android:textSize="18sp"/>
+        android:inputType="numberDecimal"
+        android:textSize="18sp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="Coments about the song:"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp"/>
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editComments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
         android:hint="User comments"
-        android:textSize="18sp"/>
+        android:inputType="numberDecimal"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/buttonNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Next Page"
-        android:textSize="18sp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="@android:color/holo_blue_dark"/>
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Next Page"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/buttonExit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Exit"
-        android:textSize="18sp"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#FF0000"/>
-
+        android:backgroundTint="#FF0000"
+        android:text="Exit"
+        android:textSize="18sp" />
