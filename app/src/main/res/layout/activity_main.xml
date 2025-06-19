@@ -1,86 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".MainActivity">
+    android:padding="24dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Song Title:"
-        android:textSize="18sp" />
-
+    <!-- Title Input -->
     <EditText
-        android:id="@+id/editsongtitle"
+        android:id="@+id/etTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter song title"
-        android:inputType="numberDecimal"
-        android:textSize="18sp" />
+        android:hint="Enter Title" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Artist Name:"
-        android:textSize="18sp" />
-
+    <!-- Artist Input -->
     <EditText
-        android:id="@+id/editTextNumber1"
+        android:id="@+id/etArtist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Artist name"
-        android:inputType="numberDecimal"
-        android:textSize="18sp" />
+        android:hint="Enter Artist" />
 
-    <TextView
+    <!-- RatingBar for Rating -->
+    <RatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="The rating:"
-        android:textSize="18sp" />
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_marginVertical="16dp"/>
 
+    <!-- Comment Input -->
     <EditText
-        android:id="@+id/editRating"
+        android:id="@+id/etComment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Rating (1-5)"
-        android:inputType="numberDecimal"
-        android:textSize="18sp" />
+        android:hint="Enter Comment"
+        android:inputType="textMultiLine"
+        android:minLines="3" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="Coments about the song:"
-        android:textSize="18sp" />
-
-    <EditText
-        android:id="@+id/editComments"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="User comments"
-        android:inputType="numberDecimal"
-        android:textSize="18sp" />
-
+    <!-- Submit Button -->
     <Button
-        android:id="@+id/buttonNext"
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Playlist"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/tvMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:text="Next Page"
-        android:textSize="18sp" />
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#0000FF"
+        android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonExit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#FF0000"
-        android:text="Exit"
-        android:textSize="18sp" />
+</LinearLayout>
